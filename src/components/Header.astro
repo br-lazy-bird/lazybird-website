@@ -1,0 +1,30 @@
+---
+const navLinks = [
+  { href: '/systems', label: 'Systems' },
+  { href: '/blog', label: 'Blog' },
+  { href: 'https://github.com/br-lazy-bird', label: 'GitHub', external: true },
+];
+---
+
+<header class="bg-white border-b border-gray-200">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-gray-700">
+        <span>Lazy Bird</span>
+      </a>
+
+      <div class="flex items-center gap-6">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+            target={link.external ? '_blank' : undefined}
+            rel={link.external ? 'noopener noreferrer' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>

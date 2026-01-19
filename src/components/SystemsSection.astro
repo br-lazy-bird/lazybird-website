@@ -1,0 +1,39 @@
+---
+import SystemCard from './SystemCard.astro';
+
+const systems = [
+  {
+    domain: 'Data Integrity',
+    name: 'Flash Sales',
+    href: 'https://github.com/br-lazy-bird/data-integrity-01-flash-sales',
+  },
+  {
+    domain: 'Event-Driven',
+    name: 'Order Processing',
+    href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
+  },
+  {
+    domain: 'Database Performance',
+    name: 'Coming Soon',
+    comingSoon: true,
+  },
+];
+---
+
+<section class="bg-gray-50 py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+      Broken Systems
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {systems.map((system) => (
+        <SystemCard
+          domain={system.domain}
+          name={system.name}
+          href={system.href}
+          comingSoon={system.comingSoon}
+        />
+      ))}
+    </div>
+  </div>
+</section>
