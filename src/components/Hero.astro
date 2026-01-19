@@ -2,26 +2,57 @@
 
 ---
 
-<section class="bg-white py-20 sm:py-32">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-      Lazy Bird catches the Bug
+<section class="relative py-12 sm:py-16">
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <img
+      src="/lazy-bird.jpeg"
+      alt="Lazy Bird mascot"
+      class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 rounded-full shadow-lg ring-4 ring-white"
+    />
+
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+      Lazy Bird catches the bug, but is too lazy to fix it.
     </h1>
-    <p class="text-xl sm:text-2xl text-gray-600 mb-10">
-      Lazy Bird found the bugs, but is too lazy to fix them.
+
+    <!-- Accent line -->
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-8 rounded-full"></div>
+
+    <!-- Brief explanation -->
+    <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+      A hands-on learning platform with intentionally broken systems.
+      Clone, run, debug, and fix real-world performance problems.
     </p>
+
+    <!-- Feature highlights -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10">
+      <div class="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-lg p-4 shadow-sm">
+        <div class="text-blue-600 font-semibold mb-1">Self-Contained</div>
+        <div class="text-sm text-slate-600">Docker-first environments ready to run</div>
+      </div>
+      <div class="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-lg p-4 shadow-sm">
+        <div class="text-blue-600 font-semibold mb-1">Real Problems</div>
+        <div class="text-sm text-slate-600">Database, concurrency, event-driven issues</div>
+      </div>
+      <div class="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-lg p-4 shadow-sm">
+        <div class="text-blue-600 font-semibold mb-1">Learn by Fixing</div>
+        <div class="text-sm text-slate-600">Diagnose, understand, and solve</div>
+      </div>
+    </div>
+
     <div class="flex justify-center gap-4">
       <a
         href="/systems"
-        class="bg-gray-900 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors"
+        class="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
       >
         Get Started
       </a>
       <a
-        href="/systems"
-        class="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-medium text-lg hover:border-gray-400 hover:bg-gray-50 transition-colors"
+        href="https://github.com/br-lazy-bird"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-medium text-lg hover:border-blue-300 hover:bg-white transition-colors"
       >
-        View Systems
+        View on GitHub
       </a>
     </div>
   </div>

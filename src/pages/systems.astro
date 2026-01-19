@@ -14,22 +14,36 @@ const systemsByDomain = [
     ],
   },
   {
-    domain: 'Event-Driven',
-    description: 'Systems using message queues and async processing.',
-    systems: [
-      {
-        name: 'Order Processing',
-        href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
-      },
-    ],
-  },
-  {
     domain: 'Database Performance',
     description: 'Systems with query optimization challenges.',
     systems: [
       {
-        name: 'Coming Soon',
-        comingSoon: true,
+        name: 'Employee Directory',
+        href: 'https://github.com/br-lazy-bird/database-performance-01-employee-directory',
+      },
+      {
+        name: 'Orders Report',
+        href: 'https://github.com/br-lazy-bird/database-performance-02-orders-reports',
+      },
+    ],
+  },
+  {
+    domain: 'Asynchronous Patterns',
+    description: 'Systems using concurrent and parallel processing.',
+    systems: [
+      {
+        name: 'Product Catalog',
+        href: 'https://github.com/br-lazy-bird/asynchronous-patterns-01-product-catalog',
+      },
+    ],
+  },
+  {
+    domain: 'Response Time Optimization',
+    description: 'Systems focused on reducing latency and improving response times.',
+    systems: [
+      {
+        name: 'Content Delivery',
+        href: 'https://github.com/br-lazy-bird/response-time-optimization-01-content-delivery',
       },
     ],
   },
@@ -37,25 +51,24 @@ const systemsByDomain = [
 ---
 
 <BaseLayout title="Systems" description="Browse all broken systems available for practice.">
-  <section class="py-16 sm:py-24">
+  <section class="py-12 sm:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Broken Systems</h1>
-      <p class="text-xl text-gray-600 mb-12">
+      <h1 class="text-4xl font-bold text-slate-900 mb-4">Broken Systems</h1>
+      <p class="text-xl text-slate-600 mb-12">
         Each system has a bug waiting to be found and fixed. Pick one and start debugging.
       </p>
 
       <div class="space-y-12">
         {systemsByDomain.map((domain) => (
           <div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-2">{domain.domain}</h2>
-            <p class="text-gray-600 mb-6">{domain.description}</p>
+            <h2 class="text-2xl font-semibold text-slate-900 mb-2">{domain.domain}</h2>
+            <p class="text-slate-600 mb-6">{domain.description}</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {domain.systems.map((system) => (
                 <SystemCard
                   domain={domain.domain}
                   name={system.name}
                   href={system.href}
-                  comingSoon={system.comingSoon}
                 />
               ))}
             </div>

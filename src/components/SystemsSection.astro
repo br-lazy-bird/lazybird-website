@@ -8,32 +8,43 @@ const systems = [
     href: 'https://github.com/br-lazy-bird/data-integrity-01-flash-sales',
   },
   {
-    domain: 'Event-Driven',
-    name: 'Order Processing',
-    href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
+    domain: 'Database Performance',
+    name: 'Employee Directory',
+    href: 'https://github.com/br-lazy-bird/database-performance-01-employee-directory',
   },
   {
-    domain: 'Database Performance',
-    name: 'Coming Soon',
-    comingSoon: true,
+    domain: 'Asynchronous Patterns',
+    name: 'Product Catalog',
+    href: 'https://github.com/br-lazy-bird/asynchronous-patterns-01-product-catalog',
   },
 ];
 ---
 
-<section class="bg-gray-50 py-16 sm:py-24">
+<section class="relative py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
+    <h2 class="text-3xl font-bold text-slate-900 text-center mb-12">
       Broken Systems
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       {systems.map((system) => (
         <SystemCard
           domain={system.domain}
           name={system.name}
           href={system.href}
-          comingSoon={system.comingSoon}
         />
       ))}
+      <a
+        href="/systems"
+        class="flex flex-col items-center justify-center bg-white/50 backdrop-blur-sm rounded-lg border border-dashed border-blue-300 p-6 hover:border-blue-400 hover:bg-white/70 transition-all group"
+      >
+        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">
+          <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </div>
+        <span class="text-blue-600 font-medium">Explore All Systems</span>
+        <span class="text-sm text-slate-500 mt-1">5 systems available</span>
+      </a>
     </div>
   </div>
 </section>
