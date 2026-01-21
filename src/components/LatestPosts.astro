@@ -20,20 +20,20 @@ function formatDate(date: Date): string {
     <h2 class="text-3xl font-bold text-slate-900 text-center mb-12">
       Latest from the Blog
     </h2>
-    <div class="space-y-4 max-w-2xl mx-auto">
+    <div class="space-y-4 max-w-4xl mx-auto">
       {latestPosts.map((post) => (
         <a
           href={`/blog/${post.id}`}
-          class="flex justify-between items-center p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors"
+          class="flex justify-between items-center p-4 bg-white border-l-4 border-l-transparent border border-slate-200 rounded-lg hover:border-l-emerald-500 hover:bg-emerald-50/50 hover:shadow-sm transition-all"
         >
           <span class="font-medium text-slate-900">{post.data.title}</span>
-          <span class="text-sm text-slate-500">{formatDate(post.data.date)}</span>
+          <span class="text-sm text-emerald-600 font-medium">{formatDate(post.data.date)}</span>
         </a>
       ))}
     </div>
     <div class="text-center mt-8">
-      <a href="/blog" class="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-        View all posts &rarr;
+      <a href="/blog" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+        View all posts <span class="ml-1">&rarr;</span>
       </a>
     </div>
   </div>
