@@ -99,6 +99,5 @@ The N+1 problem is not a bug but a side effect of a default approach in ORM libr
 
 If you want to learn more about it, you should visit these links:
 
-- **General N+1 concepts:** [Understanding the N+1 Query Problem](https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/)
 - **SQLAlchemy specifics:** [Relationship Loading Techniques](https://docs.sqlalchemy.org/en/20/orm/queryguide/relationships.html)
 - **Other ORMs:** Django ([select_related](https://docs.djangoproject.com/en/stable/ref/models/querysets/#select-related)), Hibernate ([Fetching](https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html#fetching)), ActiveRecord ([Eager Loading](https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations))
