@@ -7,7 +7,7 @@ tags: []
 
 ## Introduction
 
-Before talking about software development, let’s shift our domain a little. Imagine a small farm with a single piece of land used by two farmers to grow tomatoes for sale. Two customers arrive at the same time. Each customer is assisted by one farmer and asks whether tomatoes are available.
+Imagine a small farm with a single piece of land used by two farmers to grow tomatoes for sale. Two customers arrive at the same time. Each customer is assisted by one farmer and asks whether tomatoes are available.
 
 Customer A asks Farmer A if there are tomatoes. Customer B, on the other hand, asks Farmer B if there are tomatoes available and, if so, wants to buy all of them.
 
