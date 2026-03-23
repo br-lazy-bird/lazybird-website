@@ -4,12 +4,18 @@ interface Props {
   name: string;
   href?: string;
   comingSoon?: boolean;
+  isNew?: boolean;
 }
 
-const { domain, name, href, comingSoon = false } = Astro.props;
+const { domain, name, href, comingSoon = false, isNew = false } = Astro.props;
 ---
 
-<div class={`bg-white rounded-lg border-l-4 border p-4 ${comingSoon ? 'border-l-slate-300 border-slate-200 border-dashed' : 'border-l-emerald-500 border-slate-200 hover:border-l-emerald-600 hover:shadow-md transition-all'}`}>
+<div class={`relative bg-white rounded-lg border-l-4 border p-4 ${comingSoon ? 'border-l-slate-300 border-slate-200 border-dashed' : 'border-l-emerald-500 border-slate-200 hover:border-l-emerald-600 hover:shadow-md transition-all'}`}>
+  {isNew && (
+    <span class="absolute -top-2 -right-2 bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
+      NEW
+    </span>
+  )}
   <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-1">{domain}</p>
   <h3 class="text-base font-semibold text-slate-900 mb-2">{name}</h3>
   {comingSoon ? (

@@ -17,6 +17,12 @@ const systems = [
     name: 'Product Catalog',
     href: 'https://github.com/br-lazy-bird/asynchronous-patterns-01-product-catalog',
   },
+  {
+    domain: 'Event-Driven Architecture',
+    name: 'Order Processing',
+    href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
+    isNew: true,
+  },
 ];
 ---
 
@@ -32,6 +38,7 @@ const systems = [
           domain={system.domain}
           name={system.name}
           href={system.href}
+          isNew={system.isNew}
         />
       ))}
       <a
@@ -44,7 +51,7 @@ const systems = [
           </svg>
         </div>
         <span class="text-emerald-700 font-semibold text-sm">Explore All</span>
-        <span class="text-xs text-emerald-600 mt-1">5 systems</span>
+        <span class="text-xs text-emerald-600 mt-1">6 systems</span>
       </a>
     </div>
   </div>

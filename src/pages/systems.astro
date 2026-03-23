@@ -47,6 +47,17 @@ const systemsByDomain = [
       },
     ],
   },
+  {
+    domain: 'Event-Driven Architecture',
+    description: 'Systems using message queues and event-driven patterns.',
+    systems: [
+      {
+        name: 'Order Processing',
+        href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
+        isNew: true,
+      },
+    ],
+  },
 ];
 ---
 
@@ -69,6 +80,7 @@ const systemsByDomain = [
                   domain={domain.domain}
                   name={system.name}
                   href={system.href}
+                  isNew={system.isNew}
                 />
               ))}
             </div>
