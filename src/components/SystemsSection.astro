@@ -3,6 +3,12 @@ import SystemCard from './SystemCard.astro';
 
 const systems = [
   {
+    domain: 'Event-Driven Architecture',
+    name: 'Order Processing',
+    href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
+    isNew: true,
+  },
+  {
     domain: 'Data Integrity',
     name: 'Flash Sales',
     href: 'https://github.com/br-lazy-bird/data-integrity-01-flash-sales',
@@ -16,12 +22,6 @@ const systems = [
     domain: 'Asynchronous Patterns',
     name: 'Product Catalog',
     href: 'https://github.com/br-lazy-bird/asynchronous-patterns-01-product-catalog',
-  },
-  {
-    domain: 'Event-Driven Architecture',
-    name: 'Order Processing',
-    href: 'https://github.com/br-lazy-bird/event-driven-01-order-processing',
-    isNew: true,
   },
 ];
 ---
@@ -43,7 +43,7 @@ const systems = [
       ))}
       <a
         href="/systems"
-        class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg border-2 border-dashed border-emerald-300 p-4 hover:border-emerald-500 hover:from-emerald-100 hover:to-emerald-200 transition-all group"
+        class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg border-2 border-dashed border-emerald-300 p-4 hover:border-emerald-500 hover:from-emerald-100 hover:to-emerald-200 transition-all group md:col-start-2 md:col-span-2"
       >
         <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center mb-2 group-hover:bg-emerald-700 transition-colors shadow-md">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
